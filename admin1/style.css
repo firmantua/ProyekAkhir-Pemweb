@@ -1,0 +1,174 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: aliceblue;
+  top: 0;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+/* Styling untuk logo */
+.logo i {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Styling untuk bagian kanan */
+.right-icons {
+  display: flex;
+  align-items: center;
+}
+
+.right-icons i {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.right-icons span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.sidebar {
+  background: #2f323a;
+  margin-top: 0px;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+}
+
+.sidebar h4 {
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a:hover {
+  background: aliceblue;
+  color: #2f323a;
+}
+
+.sidebar i {
+  padding-right: 10px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  width: 100%;
+  background-color: #2f323a;
+  margin-left: 250px;
+  color: #e8e8e8;
+  text-align: center;
+  justify-items: center;
+  margin-left: 80px;
+}
+
+.footer .h5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  margin: 30px 130px;
+  padding: 120px;
+}
+
+.vision {
+  display: flex;
+  justify-content: center; /* Menyusun gambar secara horizontal di tengah */
+  align-items: center; /* Menyusun gambar secara vertikal di tengah (jika perlu) */
+  gap: 50px; /* Jarak antar gambar */
+  margin-left: 260px;
+  margin-top: -20px;
+}
+
+.vision img {
+  max-width: 300px; /* Atur ukuran maksimal gambar sesuai kebutuhan */
+  width: 270px; /* Ukuran lebar gambar yang sama */
+  height: 230px; /* Ukuran tinggi gambar yang sama */
+  object-fit: cover; /* Memastikan gambar terpotong dengan baik jika rasio aslinya berbeda */
+}
+
+.visi-misi {
+    width: 100%;
+    margin-left: 130px; /* Memastikan tabel berada di tengah */
+    border-collapse: collapse;
+  }
+  
+  /* Menata sel tabel untuk visi dan misi */
+  .visi-misi td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: top; /* Membuat teks rata atas */
+    width: 50%; /* Membagi ruang antara visi dan misi */
+  }
+  
+  /* Gaya untuk bagian visi */
+  .visi {
+    font-weight: bold;
+    color: #333;
+    font-size: 25px;
+  }
+  
+  /* Gaya untuk bagian misi */
+  .misi {
+    font-weight: bold;
+    color: #555;
+    font-size: 25px;
+    text-align: justify; /* Agar teks misi rata kiri-kanan */
+  }
+
+  .navbar .dropdown-menu {
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+.navbar .dropdown-menu a {
+    font-size: 14px;
+    padding: 10px 15px;
+    color: #333;
+}
+
+.navbar .dropdown-menu a:hover {
+    background-color: #f4f4f4;
+    color: #007bff;
+}
+
+.navbar .dropdown-menu .dropdown-divider {
+    margin: 0.5rem 0;
+}

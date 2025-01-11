@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asrama Kita</title>
+    <link rel="stylesheet" href="tampilan.css">
+    <style>
+        /* Tambahan CSS untuk daftar login */
+        .login-options {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+
+        .login-options a {
+            display: block;
+            text-decoration: none;
+            color: #007bff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .login-options a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .nav a {
+            position: relative;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navigasi">
+            <div class="logo">
+                <a href="tampilan.php">
+                    <img src="logo.png" alt="Logo Kita" class="logo-img">
+                </a>
+            </div>
+            <div class="nav">
+                <a id="loginLabel">Login</a>
+                <div class="login-options" id="loginOptions">
+                    <a href="admin1/loginadmin.php">Login Admin</a>
+                    <a href="login.php">Login Mahasiswa</a>
+                </div>
+                <a href="register.php">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SECTION UTAMA DENGAN GAMBAR BACKGROUND -->
+    <section class="header">
+        <div class="header-content">
+            <h1>ASRAMA KITA</h1>
+            <p>Fasilitas hunian nyaman dan terjangkau bagi mahasiswa untuk mendukung pengembangan diri dan pembangunan karakter di lingkungan kampus.</p>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section class="tentang-kami">
+        <h2 class="section-title">Tentang Kami</h2>
+        <p class="section-subtitle">Asrama Kita</p>
+        <div class="container">
+            <div class="box">
+                <h3>Kantor Asrama Mahasiswa Kita</h3>
+                <p>Kampus Kita, Jalan Udang Keju, Kota Kita 60111</p>
+                <p>Waktu Pelayanan: Senin s/d Jumat (08:00 - 16:00)</p>
+            </div>
+            <div class="box">
+                <h3>Hubungi Kami</h3>
+                <p>📱 0851-5675-2255</p>
+                <p>☎ (031) 592 5965</p>
+                <p>✉ asramakita@gmail.ac.id</p>
+                <p>📷 @asramakita.official</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; Copyright @Firman Tua Parhusip</p>
+    </footer>
+
+    <!-- Script untuk login dropdown -->
+    <script>
+        const loginLabel = document.getElementById('loginLabel');
+        const loginOptions = document.getElementById('loginOptions');
+
+        loginLabel.addEventListener('click', () => {
+            const isVisible = loginOptions.style.display === 'block';
+            loginOptions.style.display = isVisible ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!loginLabel.contains(event.target) && !loginOptions.contains(event.target)) {
+                loginOptions.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

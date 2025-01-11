@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #333, #676767, #000000, #003366);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Gradient Background Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-box {
+    background-color: rgba(244, 246, 249, 0.95); /* Transparan dengan Opacity */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.464);
+    padding: 40px 25px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Container */
+.logo-container {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f4f6f9;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+
+.forgot {
+    margin-top: 15px;
+}
+
+.forgot a {
+    color: #003366;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.forgot a:hover {
+    color: #0055aa;
+}
+
+/* Form Elements */
+h2 {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    color: #003366;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-field {
+    margin-bottom: 20px;
+    text-align: left;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Slide-In Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #003366;
+    box-shadow: 0 0 5px #003366;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #000000, #333333);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: background 0.9s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #737373, #000000);
+    transform: scale(1.05);
+}
+
+.footer-text {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #666;
+    animation: fadeIn 2s ease-in-out;
+}
