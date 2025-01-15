@@ -1,6 +1,6 @@
 <?php
 // Koneksi ke database
-include('koneksi.php');  // Pastikan file database.php sudah benar
+include('koneksi.html');  // Pastikan file database.html sudah benar
 
 // Proses menyimpan data ketika tombol 'Simpan' ditekan
 if (isset($_POST['simpan'])) {
@@ -46,7 +46,7 @@ if (isset($_POST['simpan'])) {
     // Eksekusi query dan beri feedback
     if (mysqli_query($conn, $query)) {
         echo "<script>alert('Data berhasil disimpan!');</script>";
-        header("Location: admin.php");  // Refresh halaman setelah simpan
+        header("Location: admin.html");  // Refresh halaman setelah simpan
         exit(); // Pastikan tidak ada kode yang dieksekusi setelah redirect
     } else {
         echo "Error: " . mysqli_error($conn);
@@ -87,7 +87,7 @@ if ($id_edit) {
             </tr>
         </thead>
         <tbody>
-            <?php
+            <?html
             // Menampilkan daftar pengelola
             $result = mysqli_query($conn, "SELECT * FROM pengelola_asrama");
             while ($row = mysqli_fetch_assoc($result)) {
@@ -97,7 +97,7 @@ if ($id_edit) {
                 echo "<td>{$row['jabatan']}</td>";
                 echo "<td>{$row['status']}</td>";
                 echo "<td><img src='{$row['foto_profil']}' width='50'></td>";
-                echo "<td><a href='admin.php?edit_id={$row['id']}'>Edit</a></td>";
+                echo "<td><a href='admin.html?edit_id={$row['id']}'>Edit</a></td>";
                 echo "</tr>";
             }
             ?>
