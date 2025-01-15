@@ -24,7 +24,7 @@ if (isset($_POST['update_status1'])) {
     // Eksekusi query dan cek apakah berhasil
     if (mysqli_query($koneksi, $query_update)) {
         // Jika berhasil, redirect ke halaman yang sama agar status1 terbaru terlihat
-        header("Location: pembayaranadmin.php");
+        header("Location: pembayaranadmin.html");
         exit;
     } else {
         echo "Error: " . mysqli_error($koneksi); // Menampilkan error jika query gagal
@@ -118,7 +118,7 @@ $result = mysqli_query($koneksi, $query);
             </tr>
         </thead>
         <tbody>
-            <?php
+            <?html
             $no = 1;
             while ($data = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
