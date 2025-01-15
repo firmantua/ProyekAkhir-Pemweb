@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'koneksi.php'; // Koneksi database
+include 'koneksi.html'; // Koneksi database
 
 if (isset($_POST['login'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -14,7 +14,7 @@ if (isset($_POST['login'])) {
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_name'] = $user['full_name']; // Simpan nama lengkap di sesi
             $_SESSION['user_email'] = $user['email'];
-            header("Location: home.php");
+            header("Location: home.html");
             exit();
         } else {
             echo "<script>alert('Password salah!');</script>";
@@ -55,10 +55,10 @@ if (isset($_POST['login'])) {
                         <input type="password" id="password" name="password" placeholder="Masukan Kata Sandi" required>
                     </div>
                     <div class="forgot">
-                        <a href="forgot_password.php">Lupa Kata Sandi?</a>
+                        <a href="forgot_password.html">Lupa Kata Sandi?</a>
                     </div>
                     <button type="submit" class="btn" name="login">Masuk</button>
-                    <p>Belum punya akun? <a href="register.php">Buat Akun</a></p>
+                    <p>Belum punya akun? <a href="register.html">Buat Akun</a></p>
                 </form>
             </div>
         </div>
