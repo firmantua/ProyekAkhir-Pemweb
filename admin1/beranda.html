@@ -3,7 +3,7 @@ session_start();
 
 // Cek apakah user sudah login
 if (!isset($_SESSION['user_name'])) {
-    header("Location: login.php");
+    header("Location: login.html");
     exit();
 }
 
@@ -79,18 +79,18 @@ if ($result && mysqli_num_rows($result) > 0) {
         <div class="right-icons">
             <i class="bi bi-bell-fill"></i>
             <i class="bi bi-person-circle"></i>
-            <span><?php echo htmlspecialchars($_SESSION['user_name']); ?></span>
+            <span><?html echo htmlspecialchars($_SESSION['user_name']); ?></span>
         </div>
     </nav>
 
     <!-- Sidebar -->
     <div class="sidebar">
         <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-        <a href="profile.php"><i class="fas fa-user"></i><span>Profil Mahasiswa</span></a>
-        <a href="pendaftaran.php"><i class="fas fa-table"></i><span>Pendaftaran</span></a>
-        <a href="keluhan.php"><i class="fas fa-list-ul"></i><span>Ajukan Keluhan</span></a>
-        <a href="pengelola_asrama.php"><i class="fas fa-pencil-alt"></i><span>Pengelola</span></a>
-        <a href="tampilan.php"><i class="fas fa-sign-out-alt"></i><span>Keluar</span></a>
+        <a href="profile.html"><i class="fas fa-user"></i><span>Profil Mahasiswa</span></a>
+        <a href="pendaftaran.html"><i class="fas fa-table"></i><span>Pendaftaran</span></a>
+        <a href="keluhan.html"><i class="fas fa-list-ul"></i><span>Ajukan Keluhan</span></a>
+        <a href="pengelola_asrama.html"><i class="fas fa-pencil-alt"></i><span>Pengelola</span></a>
+        <a href="tampilan.html"><i class="fas fa-sign-out-alt"></i><span>Keluar</span></a>
     </div>
 
     <!-- Content -->
@@ -98,15 +98,15 @@ if ($result && mysqli_num_rows($result) > 0) {
         <!-- Box Kamar -->
         <div class="kamar-box">
             <h3>Kamar Anda</h3>
-            <?php if ($kode_kamar): ?>
-                <p>Kode Kamar: <strong><?php echo htmlspecialchars($kode_kamar); ?></strong></p>
-            <?php else: ?>
+            <?html if ($kode_kamar): ?>
+                <p>Kode Kamar: <strong><?html echo htmlspecialchars($kode_kamar); ?></strong></p>
+            <?html else: ?>
                 <p>Anda belum mendapatkan kamar.</p>
-            <?php endif; ?>
+            <?html endif; ?>
         </div>
 
         <div style="text-align: center;">
-            <h2>Selamat Datang, <?php echo htmlspecialchars($_SESSION['user_name']); ?>!</h2>
+            <h2>Selamat Datang, <?html echo htmlspecialchars($_SESSION['user_name']); ?>!</h2>
         </div>
 
         <!-- Konten Tambahan -->
