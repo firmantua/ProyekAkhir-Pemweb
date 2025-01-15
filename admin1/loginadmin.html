@@ -1,4 +1,4 @@
-<?php
+<?html
 session_start();
 
 // Proses login
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($email == $admin_email && $password == $admin_password) {
         $_SESSION['admin'] = true;
         $_SESSION['email'] = $admin_email;
-        header("Location: index.php");
+        header("Location: index.html");
         exit;
     } else {
         $error = "Email atau password salah.";
@@ -133,9 +133,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="login-container">
         <h2>Login Admin</h2>
-        <?php if (isset($error)): ?>
-            <div class="error"><?php echo $error; ?></div>
-        <?php endif; ?>
+        <?html if (isset($error)): ?>
+            <div class="error"><?html echo $error; ?></div>
+        <?html endif; ?>
         <form method="POST" action="">
             <div class="form-group">
                 <label for="email">Email</label>
